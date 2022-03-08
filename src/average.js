@@ -14,14 +14,19 @@
 
 const average = (division) => {
   let sum = 0;
-  let mean = division.length;
-    if (typeof division !== []) {
+  let mean = 0;
+    if (division.length === 0) { 
+      return undefined; 
+    } 
+    for (let i = 0; i < division.length; i += 1) {
+      if (typeof division[i] !== 'number') {
     return undefined;
   }
-  for (let i = 0; i < division.length; i += 1) {
-    sum += division[i];  
-  }
-  return Math.floor(sum / mean);
+
+  sum += Math.round(division[i]);
+  mean = sum / division.length;
+ }   
+ return Math.round(mean);
 };
 
 module.exports = average;
