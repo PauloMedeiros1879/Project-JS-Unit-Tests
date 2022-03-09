@@ -42,6 +42,6 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
       productDetails('Alcool', 'Máscara')[0],
       productDetails('Alcool', 'Máscara')[1])).toBeDefined();
     // Teste se os dois productIds terminam com 123.
-    expect(productDetails.endsWith('firstProduct',[0])('secondProduct',[1])).toBe()
+    expect(productDetails('firstProduct', 'secondProduct').productId).endsWith
   });
 });
